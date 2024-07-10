@@ -5,7 +5,7 @@ def total_salary(path):
     try:
         with open(path, 'r', encoding='utf-8') as file:
             for line in file:
-                if line.strip():  # перевірка, чи не є рядок пустим
+                if line.strip():  
                     parts = line.strip().split(',')
                     if len(parts) == 2:
                         salary = int(parts[1])
