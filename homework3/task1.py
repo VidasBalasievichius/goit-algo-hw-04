@@ -1,3 +1,8 @@
+with open('salaries.txt', 'w', encoding='utf-8') as file:
+    file.write("Alex Korp,3000\n")
+    file.write("Nikita Borisenko,2000\n")
+    file.write("Sitarama Raju,1000\n")
+
 def total_salary(path):
     total_salary = 0
     num_developers = 0
@@ -25,3 +30,14 @@ def total_salary(path):
     except Exception as e:
         print(f"Помилка при обробці файлу: {e}")
         return None, None
+
+with open('salaries.txt', 'w', encoding='utf-8') as file:
+    file.write("Alex Korp,3000\n")
+    file.write("Nikita Borisenko,2000\n")
+    file.write("Sitarama Raju,1000\n")
+
+total, average = total_salary('salaries.txt')
+if total is not None:
+    print(f"Загальна зарплата: {total}")
+    print(f"Середня зарплата: {average}")
+
